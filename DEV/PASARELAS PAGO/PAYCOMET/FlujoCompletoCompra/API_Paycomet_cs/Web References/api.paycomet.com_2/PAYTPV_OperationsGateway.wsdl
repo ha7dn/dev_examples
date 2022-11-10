@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:PAYTPV_OperationsGateway" xmlns="http://schemas.xmlsoap.org/wsdl/" name="PAYTPV_OperationsGateway" targetNamespace="urn:PAYTPV_OperationsGateway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types xmlns="http://schemas.xmlsoap.org/wsdl/">
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:PAYTPV_OperationsGateway">
+      <xsd:complexType name="PayArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="xsd:integer[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="OperationArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Operation[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Operation">
+        <xsd:all>
+          <xsd:element name="PAYTPV_ERROR_ID" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_ID" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_TIMESTAMP" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_REFERENCE" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_OPERATION" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_OPERATIONNAME" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_STATE" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_STATENAME" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_TERMINAL" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_TERMINALNAME" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_PAN" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_USER" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_AMOUNT" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_CURRENCY" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_AMOUNTDISPLAY" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_ERRORID" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_ERRORDESC" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_FEEEURO" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_FEEPERCENT" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_IP" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_CARDBRAND" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_BICCODE" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_SCORING" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_AUTHCODE" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_BANKMERCHANT" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_CONCEPT" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_PANCOUNTRY" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_COUNTRY" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_ISSUERBANK" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_SPLITID" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_METHODID" type="xsd:string" />
+          <xsd:element name="PAYTPV_OPERATION_METHODNAME" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="search_operationsRequest">
+    <wsdl:part name="PAYTPV_OPERATIONS_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_SORTYPE" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_SORTORDER" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_LIMIT" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_TERMINAL" type="tns:PayArray" />
+    <wsdl:part name="PAYTPV_OPERATIONS_OPERATIONS" type="tns:PayArray" />
+    <wsdl:part name="PAYTPV_OPERATIONS_MINAMOUNT" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_MAXAMOUNT" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_STATE" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_FROMDATE" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_TODATE" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_CURRENCY" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_SIGNATURE" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_REFERENCE" type="xsd:string" />
+    <wsdl:part name="PAYTPV_OPERATIONS_SEARCHTYPE" type="xsd:integer" />
+    <wsdl:part name="PAYTPV_OPERATIONS_VERSION" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="search_operationsResponse">
+    <wsdl:part name="return" type="tns:OperationArray" />
+  </wsdl:message>
+  <wsdl:portType name="PAYTPV_OperationsGatewayPort">
+    <wsdl:operation name="search_operations">
+      <wsdl:input message="tns:search_operationsRequest" />
+      <wsdl:output message="tns:search_operationsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PAYTPV_OperationsGatewayBinding" type="tns:PAYTPV_OperationsGatewayPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="search_operations">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#Operations_Engine#search_operations" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PAYTPV_OperationsGatewayService">
+    <documentation />
+    <wsdl:port name="PAYTPV_OperationsGatewayPort" binding="tns:PAYTPV_OperationsGatewayBinding">
+      <soap:address location="https://api.paycomet.com/gateway/xml-operations" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

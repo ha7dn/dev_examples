@@ -1,0 +1,15 @@
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\bin\Debug\net6.0\AsyncVoid.exe
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\bin\Debug\net6.0\AsyncVoid.deps.json
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\bin\Debug\net6.0\AsyncVoid.runtimeconfig.json
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\bin\Debug\net6.0\AsyncVoid.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\bin\Debug\net6.0\AsyncVoid.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.csproj.AssemblyReference.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.AssemblyInfoInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.AssemblyInfo.cs
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.csproj.CoreCompileInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\refint\AsyncVoid.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\AsyncVoid.genruntimeconfig.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\AsyncVoid\obj\Debug\net6.0\ref\AsyncVoid.dll

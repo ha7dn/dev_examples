@@ -1,0 +1,7 @@
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\bin\API_Paycomet_cs.dll.config
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\bin\API_Paycomet_cs.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\bin\API_Paycomet_cs.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\obj\Debug\API_Paycomet_cs.csproj.AssemblyReference.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\obj\Debug\API_Paycomet_cs.csproj.CoreCompileInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\obj\Debug\API_Paycomet_cs.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\PASARELAS PAGO\PAYCOMET\FlujoCompletoCompra\API_Paycomet_cs\obj\Debug\API_Paycomet_cs.pdb

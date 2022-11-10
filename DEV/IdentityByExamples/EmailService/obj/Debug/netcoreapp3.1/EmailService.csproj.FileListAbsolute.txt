@@ -1,0 +1,10 @@
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.csproj.AssemblyReference.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.AssemblyInfoInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.AssemblyInfo.cs
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\bin\Debug\netcoreapp3.1\EmailService.deps.json
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\bin\Debug\netcoreapp3.1\EmailService.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\bin\Debug\netcoreapp3.1\EmailService.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\IdentityByExamples\EmailService\obj\Debug\netcoreapp3.1\EmailService.pdb

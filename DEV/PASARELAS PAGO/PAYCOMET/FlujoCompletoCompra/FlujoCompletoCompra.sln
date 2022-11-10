@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlujoCompletoCompra", "FlujoCompletoCompra.csproj", "{E351CF64-3AA5-474C-A4C7-A32F3E392C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Paycomet_cs", "API_Paycomet_cs\API_Paycomet_cs.csproj", "{20A52971-3D20-4AD4-A635-08F8BBC2FBA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E351CF64-3AA5-474C-A4C7-A32F3E392C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E351CF64-3AA5-474C-A4C7-A32F3E392C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E351CF64-3AA5-474C-A4C7-A32F3E392C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E351CF64-3AA5-474C-A4C7-A32F3E392C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A52971-3D20-4AD4-A635-08F8BBC2FBA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A52971-3D20-4AD4-A635-08F8BBC2FBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A52971-3D20-4AD4-A635-08F8BBC2FBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A52971-3D20-4AD4-A635-08F8BBC2FBA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7F1F33D-D6E0-4B9E-8EA4-7382A8B638F9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/hachedos
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = API_Paycomet_cs\\API_Paycomet_cs.csproj
+		SccProjectName1 = API_Paycomet_cs
+		SccLocalPath1 = API_Paycomet_cs
+		SccProjectUniqueName2 = FlujoCompletoCompra.csproj
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

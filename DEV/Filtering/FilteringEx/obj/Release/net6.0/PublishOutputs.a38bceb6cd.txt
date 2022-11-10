@@ -1,0 +1,12 @@
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Filtering.exe
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Filtering.dll
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Filtering.deps.json
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Filtering.runtimeconfig.json
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Filtering.pdb
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\HAYDN\source\Workspaces\Mama del Norte\API\APINetCore\Filtering\Filtering\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

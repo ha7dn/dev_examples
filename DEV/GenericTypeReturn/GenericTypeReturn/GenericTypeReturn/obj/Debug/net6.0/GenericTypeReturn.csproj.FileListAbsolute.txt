@@ -1,0 +1,15 @@
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\bin\Debug\net6.0\GenericTypeReturn.exe
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\bin\Debug\net6.0\GenericTypeReturn.deps.json
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\bin\Debug\net6.0\GenericTypeReturn.runtimeconfig.json
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\bin\Debug\net6.0\GenericTypeReturn.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\bin\Debug\net6.0\GenericTypeReturn.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.csproj.AssemblyReference.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.AssemblyInfoInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.AssemblyInfo.cs
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.csproj.CoreCompileInputs.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\refint\GenericTypeReturn.dll
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.pdb
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\GenericTypeReturn.genruntimeconfig.cache
+C:\Users\HAYDN\source\Workspaces\Desarrollo\DEV\GenericTypeReturn\GenericTypeReturn\GenericTypeReturn\obj\Debug\net6.0\ref\GenericTypeReturn.dll

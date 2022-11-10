@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:PAYTPV_BankStoreGateway" xmlns="http://schemas.xmlsoap.org/wsdl/" name="PAYTPV_BankStoreGateway" targetNamespace="urn:PAYTPV_BankStoreGateway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types xmlns="http://schemas.xmlsoap.org/wsdl/" />
+  <wsdl:message name="add_userRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PAN" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_EXPIRYDATE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CVV2" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDHOLDERNAME" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="add_userResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="add_user_tokenRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_JETTOKEN" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_JETID" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="add_user_tokenResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="add_user_dukptRequest">
+    <wsdl:part name="DS_PROVIDER_ID" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ID" type="xsd:string" />
+    <wsdl:part name="DS_TERMINAL_ID" type="xsd:string" />
+    <wsdl:part name="DS_DEVICE_KSN" type="xsd:string" />
+    <wsdl:part name="DS_DEVICE_DUKPT" type="xsd:string" />
+    <wsdl:part name="DS_SIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="add_user_dukptResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_EXPIRY_DATE" type="xsd:string" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="info_userRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="info_userResponse">
+    <wsdl:part name="DS_MERCHANT_PAN" type="xsd:string" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+    <wsdl:part name="DS_CARD_BRAND" type="xsd:string" />
+    <wsdl:part name="DS_CARD_TYPE" type="xsd:string" />
+    <wsdl:part name="DS_CARD_I_COUNTRY_ISO3" type="xsd:string" />
+    <wsdl:part name="DS_EXPIRYDATE" type="xsd:string" />
+    <wsdl:part name="DS_CARD_HASH" type="xsd:string" />
+    <wsdl:part name="DS_CARD_CATEGORY" type="xsd:string" />
+    <wsdl:part name="DS_SEPA_CARD" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="remove_userRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="remove_userResponse">
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchaseRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PRODUCTDESCRIPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_OWNER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCORING" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_DATA" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCA_EXCEPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRX_TYPE" type="xsd:string" />
+    <wsdl:part name="DS_ESCROW_TARGETS" type="xsd:string" />
+    <wsdl:part name="DS_USER_INTERACTION" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchaseResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+    <wsdl:part name="DS_CHALLENGE_URL" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchase_dccRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PRODUCTDESCRIPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_OWNER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchase_dccResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_SESSION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_CURRENCYISO3" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_CURRENCYNAME" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_EXCHANGE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_MARKUP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_CARDCOUNTRY" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="confirm_purchase_dccRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_DCC_SESSION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="confirm_purchase_dccResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="execute_refundRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="execute_refundResponse">
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_subscriptionRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PAN" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_EXPIRYDATE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CVV2" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_STARTDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ENDDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_PERIODICITY" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_EXECUTE" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_CARDHOLDERNAME" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCORING" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_DATA" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCA_EXCEPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRX_TYPE" type="xsd:string" />
+    <wsdl:part name="DS_ESCROW_TARGETS" type="xsd:string" />
+    <wsdl:part name="DS_USER_INTERACTION" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_subscriptionResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:integer" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="edit_subscriptionRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_STARTDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ENDDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_PERIODICITY" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_EXECUTE" type="xsd:integer" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="edit_subscriptionResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:integer" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:string" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="remove_subscriptionRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="remove_subscriptionResponse">
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_subscription_tokenRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_STARTDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ENDDATE" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_PERIODICITY" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCORING" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_DATA" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCA_EXCEPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRX_TYPE" type="xsd:string" />
+    <wsdl:part name="DS_ESCROW_TARGETS" type="xsd:string" />
+    <wsdl:part name="DS_USER_INTERACTION" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_subscription_tokenResponse">
+    <wsdl:part name="DS_IDUSER" type="xsd:integer" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBSCRIPTION_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_preauthorizationRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PRODUCTDESCRIPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_OWNER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCORING" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_DATA" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_SCA_EXCEPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRX_TYPE" type="xsd:string" />
+    <wsdl:part name="DS_ESCROW_TARGETS" type="xsd:string" />
+    <wsdl:part name="DS_USER_INTERACTION" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="create_preauthorizationResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="preauthorization_confirmRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="preauthorization_confirmResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="preauthorization_cancelRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="preauthorization_cancelResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="deferred_preauthorization_confirmRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deferred_preauthorization_confirmResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="deferred_preauthorization_cancelRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_ORIGINAL_IP" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deferred_preauthorization_cancelResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchase_rtokenRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_IDENTIFIER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_PRODUCTDESCRIPTION" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTDESCRIPTOR" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="execute_purchase_rtokenResponse">
+    <wsdl:part name="DS_MERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CARDCOUNTRY" type="xsd:integer" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="split_transferRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_TERMINAL_SPLITID" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="split_transferResponse">
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRANSFER_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="split_transfer_reversalRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_TERMINAL_SPLITID" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_SPLIT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="split_transfer_reversalResponse">
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRANSFER_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="get_balanceRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="get_balanceResponse">
+    <wsdl:part name="DS_GLOBAL" type="xsd:string" />
+    <wsdl:part name="DS_AVAILABLE" type="xsd:string" />
+    <wsdl:part name="DS_DEPOSIT" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="update_expiry_dateRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_IDUSER" type="xsd:string" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+    <wsdl:part name="DS_EXPIRY_DATE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_CVV2" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="update_expiry_dateResponse">
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+    <wsdl:part name="DS_TOKEN_USER" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="transferRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_TERMINAL_SPLITID" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="transferResponse">
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRANSFER_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="transfer_reversalRequest">
+    <wsdl:part name="DS_MERCHANT_MERCHANTCODE" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TERMINAL" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_TERMINAL_SPLITID" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_SPLIT_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_MERCHANTSIGNATURE" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="transfer_reversalResponse">
+    <wsdl:part name="DS_SUBMERCHANT_AMOUNT" type="xsd:integer" />
+    <wsdl:part name="DS_MERCHANT_ORDER" type="xsd:string" />
+    <wsdl:part name="DS_SUBMERCHANT_CURRENCY" type="xsd:string" />
+    <wsdl:part name="DS_MERCHANT_TRANSFER_AUTHCODE" type="xsd:string" />
+    <wsdl:part name="DS_RESPONSE" type="xsd:integer" />
+    <wsdl:part name="DS_ERROR_ID" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:portType name="PAYTPV_BankStoreGatewayPort">
+    <wsdl:operation name="add_user">
+      <wsdl:input message="tns:add_userRequest" />
+      <wsdl:output message="tns:add_userResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="add_user_token">
+      <wsdl:input message="tns:add_user_tokenRequest" />
+      <wsdl:output message="tns:add_user_tokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="add_user_dukpt">
+      <wsdl:input message="tns:add_user_dukptRequest" />
+      <wsdl:output message="tns:add_user_dukptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="info_user">
+      <wsdl:input message="tns:info_userRequest" />
+      <wsdl:output message="tns:info_userResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="remove_user">
+      <wsdl:input message="tns:remove_userRequest" />
+      <wsdl:output message="tns:remove_userResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase">
+      <wsdl:input message="tns:execute_purchaseRequest" />
+      <wsdl:output message="tns:execute_purchaseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase_dcc">
+      <wsdl:input message="tns:execute_purchase_dccRequest" />
+      <wsdl:output message="tns:execute_purchase_dccResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="confirm_purchase_dcc">
+      <wsdl:input message="tns:confirm_purchase_dccRequest" />
+      <wsdl:output message="tns:confirm_purchase_dccResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="execute_refund">
+      <wsdl:input message="tns:execute_refundRequest" />
+      <wsdl:output message="tns:execute_refundResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="create_subscription">
+      <wsdl:input message="tns:create_subscriptionRequest" />
+      <wsdl:output message="tns:create_subscriptionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="edit_subscription">
+      <wsdl:input message="tns:edit_subscriptionRequest" />
+      <wsdl:output message="tns:edit_subscriptionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="remove_subscription">
+      <wsdl:input message="tns:remove_subscriptionRequest" />
+      <wsdl:output message="tns:remove_subscriptionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="create_subscription_token">
+      <wsdl:input message="tns:create_subscription_tokenRequest" />
+      <wsdl:output message="tns:create_subscription_tokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="create_preauthorization">
+      <wsdl:input message="tns:create_preauthorizationRequest" />
+      <wsdl:output message="tns:create_preauthorizationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="preauthorization_confirm">
+      <wsdl:input message="tns:preauthorization_confirmRequest" />
+      <wsdl:output message="tns:preauthorization_confirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="preauthorization_cancel">
+      <wsdl:input message="tns:preauthorization_cancelRequest" />
+      <wsdl:output message="tns:preauthorization_cancelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deferred_preauthorization_confirm">
+      <wsdl:input message="tns:deferred_preauthorization_confirmRequest" />
+      <wsdl:output message="tns:deferred_preauthorization_confirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deferred_preauthorization_cancel">
+      <wsdl:input message="tns:deferred_preauthorization_cancelRequest" />
+      <wsdl:output message="tns:deferred_preauthorization_cancelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase_rtoken">
+      <wsdl:input message="tns:execute_purchase_rtokenRequest" />
+      <wsdl:output message="tns:execute_purchase_rtokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="split_transfer">
+      <wsdl:input message="tns:split_transferRequest" />
+      <wsdl:output message="tns:split_transferResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="split_transfer_reversal">
+      <wsdl:input message="tns:split_transfer_reversalRequest" />
+      <wsdl:output message="tns:split_transfer_reversalResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="get_balance">
+      <wsdl:input message="tns:get_balanceRequest" />
+      <wsdl:output message="tns:get_balanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="update_expiry_date">
+      <wsdl:input message="tns:update_expiry_dateRequest" />
+      <wsdl:output message="tns:update_expiry_dateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <wsdl:input message="tns:transferRequest" />
+      <wsdl:output message="tns:transferResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="transfer_reversal">
+      <wsdl:input message="tns:transfer_reversalRequest" />
+      <wsdl:output message="tns:transfer_reversalResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PAYTPV_BankStoreGatewayBinding" type="tns:PAYTPV_BankStoreGatewayPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="add_user">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#add_user" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_user_token">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#add_user_token" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_user_dukpt">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#add_user_dukpt" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="info_user">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#info_user" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove_user">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#remove_user" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#execute_purchase" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase_dcc">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#execute_purchase_dcc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirm_purchase_dcc">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#confirm_purchase_dcc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execute_refund">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#execute_refund" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create_subscription">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#create_subscription" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit_subscription">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#edit_subscription" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove_subscription">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#remove_subscription" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create_subscription_token">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#create_subscription_token" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create_preauthorization">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#create_preauthorization" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preauthorization_confirm">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#preauthorization_confirm" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="preauthorization_cancel">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#preauthorization_cancel" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deferred_preauthorization_confirm">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#deferred_preauthorization_confirm" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deferred_preauthorization_cancel">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#deferred_preauthorization_cancel" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execute_purchase_rtoken">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#execute_purchase_rtoken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="split_transfer">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#split_transfer" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="split_transfer_reversal">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#split_transfer_reversal" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_balance">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#get_balance" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_expiry_date">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#update_expiry_date" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#transfer" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="transfer_reversal">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/soap/envelope/#BankStore#transfer_reversal" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://schemas.xmlsoap.org/soap/envelope/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PAYTPV_BankStoreGatewayService">
+    <documentation />
+    <wsdl:port name="PAYTPV_BankStoreGatewayPort" binding="tns:PAYTPV_BankStoreGatewayBinding">
+      <soap:address location="https://api.paycomet.com/gateway/xml-bankstore" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

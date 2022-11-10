@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncVoid", "AsyncVoid.csproj", "{A1395E36-41C9-4A2C-9857-27ECF59C9168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1395E36-41C9-4A2C-9857-27ECF59C9168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1395E36-41C9-4A2C-9857-27ECF59C9168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1395E36-41C9-4A2C-9857-27ECF59C9168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1395E36-41C9-4A2C-9857-27ECF59C9168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56B61150-1658-430D-8F52-EC41134CC28C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://enmarkados.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AsyncVoid.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal

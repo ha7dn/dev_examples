@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomAlphaNum", "RandomAlphaNum.csproj", "{F7661976-92CA-4A1A-8122-6B4A0501D833}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7661976-92CA-4A1A-8122-6B4A0501D833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7661976-92CA-4A1A-8122-6B4A0501D833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7661976-92CA-4A1A-8122-6B4A0501D833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7661976-92CA-4A1A-8122-6B4A0501D833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {566580FC-A0A9-4A5E-9036-999C76091192}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://enmarkados.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RandomAlphaNum.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal
